@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Day Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>DAY PLANNER</h1>
+
+    <!-- Month & Year Picker -->
+    <div class="controls">
+      <select id="month-select"></select>
+      <select id="year-select"></select>
+    </div>
+
+    <div id="calendar"></div>
+
+    <!-- Legend -->
+    <div class="legend">
+      <p><span class="legend-box today-color"></span> Today</p>
+      <p><span class="legend-box selected-color"></span> Selected Date</p>
+    </div>
+
+    <!-- Planner -->
+    <div id="planner" class="hidden">
+      <h2 id="selected-date-title"></h2>
+      <form id="planner-form">
+        <label>Entry Time:</label>
+        <input type="time" id="entry-time" required />
+
+        <label>Planning Time:</label>
+        <input type="time" id="planning-time" required />
+
+        <label>Task Description:</label>
+        <textarea id="task-desc" required></textarea>
+
+        <button type="submit">Save Task</button>
+      </form>
+      <div id="task-list"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
